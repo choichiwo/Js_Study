@@ -17,12 +17,12 @@ Checkbox:<input type="checkbox" name="hobby" id="movie">영화보기
 <input type="checkbox" name="hobby" id="climbing">등산<br>
 Textarea:<textarea id="txtAddress" cols="60" rows="3"></textarea><br>
 Select: <select id="selNation" size="5">
-<option value="Korea">대한민국</option>
-<option value="USA">USA</option>
+<option value="KR">대한민국</option>
+<option value="US">USA</option>
 <option value="FR">France</option>
 <option value="UK">England</option>
 </select><br>
-<button id="btnShow">보기</button><br>
+<button id="btnShow">보기</button>
 <button id="btnWrite">쓰기</button><br>
 <div id=dvShow style="background-color: yellow;width:300px;height:200px;">
 </div>
@@ -36,9 +36,11 @@ $(document)
     if($("#male").is(":checked")){
         str3="male";
     } else if($("#female").is(":checked")){
-        str4="female";
+        str3="female";
     } else {
-        str3="";
+        //str3="";
+        alert("성별을 지정하십시오.")
+        return false;
     }    
     str4=$("#txtNum").val();
     str5="";
@@ -51,19 +53,31 @@ $(document)
     if($("#climbing").is(":checked")){
         str5+="등산";
     }
+    if(str5==""){
+        alert("취미를 최소한 하나는 알려주십시오.")
+        return false;
+    }
     str6=$("#txtAddress").val();
     str7=$("#selNation").val();
     str=str1+"<br>"+str2+"<br>"+str3+"<br>"+str4+"<br>"+str5+"<br>"+str6+"<br>"+str7;
     //$("#dvShow").text(str);
     $("#dvShow").html(str);
+    return false;
 })
 .on("click","#btnWrite",function(){
     $("#txtName").val("Joh");
     $("#txtHidden").val("숨겨라");
     $("#female").prop("checked",true);
     $("#txtNum").val(150);
-    $("#Movie").prop("checked",true);
-    $("#climbing").prop("checked",true);
+    $("#Movie").prop("checked",true); // attribute -> property(속성) 
+    $("#climbing").prop("checked",true); //대부분 prop대신 attr가능
+    $("#txtAddress").val("천안시 동남구 대흥동 125 백자빌딩");
+    $("#selNation").val("US");
+    return false;
 })    
+.on("blur","#txtName",function(){// call-back
+    alert($(this).val());
+    return false;
+})
 </script>
 </html>

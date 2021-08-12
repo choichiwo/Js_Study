@@ -172,7 +172,7 @@ main{
 }
 /*버튼의 역할에 맞춰 색상 나누기*/
 .btn {
-	background-color: #ccc;
+	background-color: rgb(208, 234, 245);
 }
 
 /*--impossible_list영역 3번 박스--*/

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+    }
+</style>
+<body>
+    <!-- <input type="text" name="txtName" value="블랙핑크"><br>
+    <input type="radio" name="txtGender">성별<br>
+    <input type="checkbox" name="chkName">체크박스<br> -->
+    <table border="1">
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+    </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+var bcolor;
+$(document)
+.ready(function(){
+    // $('input[name=textName],input[name=txtGender]')
+    // $('input[name^=txt]')
+    // .css('background-color', 'yellow');
+    // $('input[name$=Name]').css('color','red');
+    // $('input[name*=Name]')
+    // $('#tbl > tr:eq(0) > td:eq(1)')
+    $('table tr:odd').css('background-color','pink')
+    // $('table tr:even').css('background-color','cyan')
+    $('table tr').even().css('background-color','cyan')
+})
+.on('mouseover','table tr',function(){
+    bcolor=$(this).css('background-color');
+    $(this).css('background-color','brown')
+    return false;;
+})
+.on('mouseleave','table tr',function(){
+    $(this).css('background-color','bcolor')
+    return false;
+})
+</script>
+</html>

@@ -40,3 +40,17 @@ a로 시작하는 모든단어
 a로 시작하는 세글자짜리 단어
 첫글자가 대문자인 단어
 the <- The => 대소문자구분없이 "[Tt]he" <- 정규표현식
+
+odd number : 홀수
+even number: 짝수
+
+close 가깝다.
+closest 가장 가까운
+
+append prepend <- 기준태크의 안쪽 앞뒤에 추가
+after before <- 기준태그의 바깥 앞뒤에 추가
+
+<select>
+<option></option>
+<option></option>
+</select>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+    }
+</style>
+<body>
+    <!-- tr = 세로, td = 가로 -->
+    <table border="1" id=tbl>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+    </table><br>
+    <input type="button" id="btnGo" value="채우기">
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    $(document)
+
+    .on('click','#btnGo',function(){
+        k=1;//증가하며 입력될 변수
+        y=0;//tr세로
+        j=0;//td가로
+        for(y=0; y<$('#tbl tr').length; y++) {
+            if(y%2==0){//정방향
+                 for(j=0; j<$('#tbl tr:eq(0) td').length; j++)
+                     {
+                     $('#tbl tr:eq('+y+') td:eq('+j+')').text(k);
+                     k++;
+                     }
+             } else {//역방향
+                 for(j=$('#tbl tr:eq(0) td').length-1; j>=0; j--)
+                     {
+                     $('#tbl tr:eq('+y+') td:eq('+j+')').text(k);
+                     k++;
+                     }
+                }
+        }
+})
+</script>
+</html>

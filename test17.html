@@ -17,7 +17,7 @@
     <!-- <input type="text" name="txtName" value="블랙핑크"><br>
     <input type="radio" name="txtGender">성별<br>
     <input type="checkbox" name="chkName">체크박스<br> -->
-    <table border="1">
+    <table id="tbl" border="1">
         <tr><td></td><td></td><td></td><td></td></tr>
         <tr><td></td><td></td><td></td><td></td></tr>
         <tr><td></td><td></td><td></td><td></td></tr>
@@ -28,15 +28,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
-var bcolor;
+var num="1";
 $(document)
 .ready(function(){
-    // $('input[name=textName],input[name=txtGender]')
-    // $('input[name^=txt]')
-    // .css('background-color', 'yellow');
-    // $('input[name$=Name]').css('color','red');
-    // $('input[name*=Name]')
-    // $('#tbl > tr:eq(0) > td:eq(1)')
+// 테이블에서 클릭하면 클릭한 td에 숫자 표시
+// 단 td에 이미 숫자가 있으면 아무것두 안함
     $('table tr:odd').css('background-color','pink')
     // $('table tr:even').css('background-color','cyan')
     $('table tr').even().css('background-color','cyan')
@@ -49,6 +45,16 @@ $(document)
 .on('mouseleave','table tr',function(){
     $(this).css('background-color',bcolor)
     return false;
+})
+.on('click','table tr td',function(){
+    if($(this).text()==""){
+        $(this).text(num++)
+    }else if($(this).val()==num) {
+        return false;
+    } else {
+
+    }
+    return false
 })
 </script>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake</title>
+</head>
+<style>
+    td{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+    }
+</style>
+<body>
+    <!-- tr = 세로, td = 가로 -->
+    <table border="1" id=tbl>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    </table><br>
+    <input type="button" id="btnGo" value="채우기">
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    n=prompt('n값을 입력하시오');
+    k=1;
+    for(i=0;i<n;i++){
+        if(i%2==0){ //좌->우 증가 정방향
+            for(j=0;j<n;j++){
+                $('#tbl tr:eq('+i+') td:eq('+j+')').text(k++);
+            }
+        } else{//좌->우 감소 역방향
+            for(j=n-1;j>=0;j--) {
+                $('#tbl tr:eq('+i+') td:eq('+j+')').text(k++);
+            }
+        }
+    }
+</script>
+</html>

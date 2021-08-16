@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+    }
+</style>
+<body>
+    <table id="tbl" border="1">
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+    </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+// var ar=[9,8,7,6,5,4,3,2,1,0];
+// var ar=["Hello","World","USA"];
+var student={name:"xaexal",age:22,gender:'male',mobile:"45465"};
+$(document)
+.ready(function(){
+    // for(i=0;i<ar.length;i++){
+    //     document.write(ar[i]+'<br>')
+    // }
+    // for(value of ar){
+    //     document.write(value+'<br>')
+    // }
+    // ar.forEach(function(value,index){
+    //     document.write(index+'='+value+"<br>");
+    // })
+    // ar.forEach(function(value){
+    //     document.write(value+"<br>");
+    // })
+    // $.each(student,function(index,value){
+    //     document.write(index+'='+value+'<br>');
+    // })
+    k=1;
+    $('#tbl tr').each(function(){
+        $(this).find('td').each(function(){  
+            $(this).text(k++);
+        });
+    })
+})
+</script>
+</html>

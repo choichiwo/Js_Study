@@ -13,23 +13,35 @@
         text-align: center;
     }
 </style>
-<script>
-    $(document)
-    .ready(function(){// webpage load 후에
-        $('body').append('휴면교육센터')
-        $('#tbl tr:eq91) td:eq(0) input')
-        // #:id, .:class :tag
-        $('#tbl') // id가 tbl인 element.
-        $('.board') // class가 board인걸
-    });
-    </script>
+
 <body>
-    <table id=tbl border=1>
-        <tr><td></td><td></td></tr>
-        <tr><td><input type="checkbox" id="txtName"></td><td></td></tr>
-        <tr><td></td><td></td></tr>
+    <table id="tbl" border="1">
+    <tr><td></td><td></td></tr>
+    <tr><td><input type="text" id="txtName" class="last"></td><td></td></tr>
+    <tr><td><input type="text" id="txtName"></td><td></td></tr>
     </table><br>
+    <input type="button" id="btnGo" value="Go" name="btnGoGoGo">
+    <input type="radio" name="gender" id="male" value="male">
 </body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+$(document)
+.ready(function(){// webpage load 후에
+    // $('body').append('휴면교육센터')
+    // $('#tbl tr:eq91) td:eq(0) input')
+    // // #:id, .:class :tag
+    // $('#tbl') // id가 tbl인 element.
+    // $('.board') // class가 board인걸 가진 element
+    // <p class='board plate'>
+    // $('body')
+    // $('form:eq(1)')
+    // $('input[name=txtName]').val('park')
+})
+.on('click','#btnGo',function(){
+    // $('input[name=txtName].last').val('park');
+    // $('input[name=txtName].last').prop('type','radio');
+    $('#male').prop('type','text');
+})
+</script>
 
 </html>

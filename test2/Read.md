@@ -17,3 +17,12 @@ n=2;
 str='#tbl te:eq('+m+') td:eq('+n+')';
 str='#tbl tr:eq(${m}) td:eq(${n})';
 $(str).text('A');
+
+정규표현식(Regular Expression)
+
+abc
+
+a로 시작하는 모든단어
+a로 시작하는 세글자짜리 단어
+첫글자가 대문자인 단어
+the <- The => 대소문자구분없이

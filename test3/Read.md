@@ -51,3 +51,7 @@ javascript <-> Server 통신(data전달)
 
  Synchronous(동기식)
  Asynchronous(비동기식)
+
+AJAX 형식
+프로그램 경로명?key1=value1&key2=value2&key3=value3...
+QueryString = 서버프로그램에게 보내는 값들의 리스트

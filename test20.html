@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+td {
+    width: 80px;
+    height: 50px;
+}
+</style>
+<body>
+<table border="1" id="tbl">
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+</table><br>   
+<input type="radio" name="gender" value="male">남성
+<input type="radio" name="gender" value="female">여성
+<input type="text" id="txtName">
+<input type="text" id="txtAddress">
+<input type="button" id="btnGo" value="alternative">
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+$(document)
+.ready(function(){    
+    // ar=[1,2,3,];
+    // ar1='123';
+    // ob={};
+    // ob1={name:'xaexal',age:22,mobile:{home:'2659444',cell:'55834032'}};
+    // nNow=$.now()
+    
+    // document.write('start='+nNow+'<br>')
+
+    // document.write('empty(ob)='+$.isEmptyObject(ob)); document.write('<br>');
+    // document.write('empty(ob1)'+$.isEmptyObject(ob1)); document.write('<br>');
+    // //위에는 빈문자열이면 트루 아니면 펄스
+    
+    // document.write('ar='+$.isArray(ar)); document.write('<br>');
+    // document.write('ar1='+$.isArray(ar1)); document.write('<br>');
+    // //위에는 배열이면 트루 아니면 펄스
+    
+    // str='abc123';
+    // str1='123';
+    // str2=123;
+    // document.write(str+'='+isNaN(str)); document.write('<br>');
+    // document.write(str1+'='+isNaN(str1)); document.write('<br>');
+    // document.write(str2+'='+isNaN(str2)); document.write('<br>');
+    // // 위에는 숫자가 아니면 트루 숫자이면 펄스
+    // document.write(str+':'+$.isNumeric(str));document.write('<br>');
+    // document.write(str1+':'+$.isNumeric(str1));document.write('<br>');
+    // document.write(str2+':'+$.isNumeric(str2));document.write('<br>');
+    // // 위에는 숫자면 트루 숫자아니면 펄스
+
+    // nNow=$.now()-nNow;
+    // document.write('now='+nNow+'<br>')
+})
+.on('click','#btnGo',function(){
+    $('input[name=gender]').remove(); // 지우는기능
+    // console.log('length='+$('input').length)
+    // console.log('length2='+$('input[type=text]').length)
+}) 
+.on('click','input',function(){
+    console.log('input index='+$(this).index());
+})
+.on('click','input[type=text]',function(){
+    console.log('input[type=text] index='+$(this).index());
+})   
+</script>
+</html>

@@ -72,5 +72,10 @@ $(document)
 .on('click','input[type=text]',function(){
     console.log('input[type=text] index='+$(this).index());
 })   
+$(window)
+.resize(function(){
+    console.log($(window).width()+','+$(window).height());
+    return false;
+})
 </script>
 </html>

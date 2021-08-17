@@ -7,17 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-<form method="POST" action="http://hman.com/lofinServlet">
+<!-- <form method="POST" action="http://hman.com/lofinServlet"> -->
     <input type="text" name="userid"><br>
     <input type="password" name="passcode"><br>
-    <input type="submit" value="login"><br>
+    <!-- <input type="submit" value="login"><br> -->
+    <input type="button" value="Login">
     <input type="reset" value="Cleaar">
-</form>    
+<!-- </form>     -->
 </body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
 $(document)
+.on('click','#btnLogin',function(){
+    $.ajax({ //standard
+        method:'get',
+        action:'http://my.service.com:5098/admin/board/board_update_form',
+        data: 'userid='+$('#input[name=userid]').val()+'&passcode='+$('input[name=passcode]').val(), //data for server
+        dataType: 'text',
+        success:function(){}, //server가 제대로 응답. try
+        error:function(){},  // server가 응답을 안하거나, 에러가 발행 catch
+        complete:function(){}  // 모든 거 (success/error)실행후 후처리. finally
+    })
+    $.post() // simple
+    $.get() // simple
+})
 .on('submit',function(){
+    if($('input[name=userid]').val()==''){
+        alert('유저아이디를 입력하시오');
+        return false;
+    }
+    if($('input[name=passcode]').val()==''){
+        alert('비밀번호를 입력하시오');
+        return false; // break
+    }
+    return true // continue;
+})
+.on('click','#btnLogin',function(){
     if($('input[name=userid]').val()==''){
         alert('유저아이디를 입력하시오');
         return false;
@@ -26,6 +51,7 @@ $(document)
         alert('비밀번호를 입력하시오');
         return false;
     }
-});    
+    $('form').submit();
+});   
 </script>
 </html>

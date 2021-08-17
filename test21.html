@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form method="POST" action="http://hman.com/lofinServlet">
+    <input type="text" name="userid"><br>
+    <input type="password" name="passcode"><br>
+    <input type="submit" value="login"><br>
+    <input type="reset" value="Cleaar">
+</form>    
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+$(document)
+.on('submit',function(){
+    if($('input[name=userid]').val()==''){
+        alert('유저아이디를 입력하시오');
+        return false;
+    }
+    if($('input[name=passcode]').val()==''){
+        alert('비밀번호를 입력하시오');
+        return false;
+    }
+});    
+</script>
+</html>

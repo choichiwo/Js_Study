@@ -7,22 +7,21 @@
     <title>Coffeshop</title>
     <link href="Coffeshop.css" rel="stylesheet" media="all">
 </head>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="Coffeshop.js"></script>
 <body>
     <div id="container">
-        <header>
-            
+        <header>        
         </header>
-    
         <main>
             <div class="menu">
                 <div class="possible_list">
                         <h2>메뉴목록</h2>
-                            <select size="7" name="pref" multiple>
-                                <option value="" selected>메뉴를 선택해 주세요.</option>
-                                <option value="coffelattae">카페라떼 3000</option>
-                                <option value="espresso">에스프레소 2000</option>
-                                <option value="americano">아메리카노 2500</option>
-                                <option value="cappuccino">카푸치노 3500</option>
+                            <select size="7" name="menulist" id="menulist" multiple>
+                                <option id="late" value="coffelattae">카페라떼 3000</option>
+                                <option id="espresso" value="espresso">에스프레소 2000</option>
+                                <option id="americano" value="americano">아메리카노 2500</option>
+                                <option id="cafuchino" value="cappuccino">카푸치노 3500</option>
                                 </select>
                 </div><!-- possible_list -->
             </div><!-- menu -->
@@ -31,41 +30,35 @@
             <div class="choicesystem">
                 <div class="order">
                     <h2>주문목록</h2>
-                    <select size="7" id="order" name="pref" multiple>
-                        <option value="cappuccino">카푸치노 2잔 7000</option>
-                        <option value="coffelattae">카페라떼 3잔 9000</option>
-                        </select>
+                    <select size="10" id="orderlist" name="orderlist" multiple></select>
                     <table class="choices">
                         <tr>
                             <th>메뉴명</th>
-                            <td><input type="text" name="a1" id="a1" size="20"></td>
+                            <td><input type="text" name="menuname" id="menuname" size="20"></td>
                         </tr>
                         <tr>
                             <th>수량</th>
-                            <td><input type="text" name="a1" id="a1" size="20"></td>
+                            <td><input type="number" name="cnt" id="cnt" size="20"></td>
                         </tr>
                         <tr>
                             <th>총액</th>
-                            <td><input type="text" name="a2" id="a1" size="20"></td>
+                            <td><input type="text" name="sum" id="sum" size="20"></td>
                         </tr>
                     </table>
                 </div><!-- order -->
                 <div class="btns">
-                    <input type="reset" value="추가" class="btn btn-check">
-                    <input type="submit" value="삭제" class="btn btn-delete">
+                    <input type="submit" value="추가" id="btnadd" class="btn btn-check">
+                    <input type="button" value="삭제" id="btndelete" class="btn btn-delete">
                 </div><!-- btns -->
                 <div class="btn2">
-                    <input type="submit" value="주문" class="btn btn-order">
+                    <input type="button" value="주문" id="btnorder" class="btn btn-order">
                 </div>
             </div><!-- choicesystem -->
 
 
             <div class="Sales_Status">
                 <h2>메출현황</h2>
-                    <select size="7" name="pref" multiple>
-                        <option value="cappuccino">01055834032 카푸치노 2잔</option>
-                        <option value="coffelattae">01055834032 카페라떼 3잔</option>
-                        </select>
+                    <select size="10" name="Sales" id="Saleslist" multiple></select>
             </div><!--  Sales_Status -->
 
         </main>

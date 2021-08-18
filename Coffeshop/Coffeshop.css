@@ -87,10 +87,20 @@ main{
     height: 500px;
     margin-top: 35px;
 }
-.choicesystem #order{
+.choicesystem #orderlist{
     width: 385px;
 }    
-.choicesystem #a1 {
+.choicesystem #menuname {
+    width: 230px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.choicesystem #cnt{
+    width: 230px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.choicesystem #sum {
     width: 230px;
     margin-top: 15px;
     margin-left: 15px;

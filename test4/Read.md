@@ -19,3 +19,12 @@ Delete      delete      drop/truncate
 
 대상        실제데이터  메타데이터
 
+varchar (Variable Character: 가변길이 문자열)
+
+create table 이름( 칼럼명1타입(길이),칼럼명2타입(길이))
+
+insert into 테이블명 values(값1,값2...값n)
+
+select * from 테이블명
+
+delete from 테이블명

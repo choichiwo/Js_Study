@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffeshop</title>
+    <link href="Coffeshop.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <div id="container">
+        <header>
+            
+        </header>
+    
+        <main>
+            <div class="menu">
+                <div class="possible_list">
+                        <h2>메뉴목록</h2>
+                            <select size="7" name="pref" multiple>
+                                <option value="" selected>메뉴를 선택해 주세요.</option>
+                                <option value="coffelattae">카페라떼 3000</option>
+                                <option value="espresso">에스프레소 2000</option>
+                                <option value="americano">아메리카노 2500</option>
+                                <option value="cappuccino">카푸치노 3500</option>
+                                </select>
+                </div><!-- possible_list -->
+            </div><!-- menu -->
+
+
+            <div class="choicesystem">
+                <div class="order">
+                    <h2>주문목록</h2>
+                    <select size="7" id="order" name="pref" multiple>
+                        <option value="cappuccino">카푸치노 2잔 7000</option>
+                        <option value="coffelattae">카페라떼 3잔 9000</option>
+                        </select>
+                    <table class="choices">
+                        <tr>
+                            <th>메뉴명</th>
+                            <td><input type="text" name="a1" id="a1" size="20"></td>
+                        </tr>
+                        <tr>
+                            <th>수량</th>
+                            <td><input type="text" name="a1" id="a1" size="20"></td>
+                        </tr>
+                        <tr>
+                            <th>총액</th>
+                            <td><input type="text" name="a2" id="a1" size="20"></td>
+                        </tr>
+                    </table>
+                </div><!-- order -->
+                <div class="btns">
+                    <input type="reset" value="추가" class="btn btn-check">
+                    <input type="submit" value="삭제" class="btn btn-delete">
+                </div><!-- btns -->
+                <div class="btn2">
+                    <input type="submit" value="주문" class="btn btn-order">
+                </div>
+            </div><!-- choicesystem -->
+
+
+            <div class="Sales_Status">
+                <h2>메출현황</h2>
+                    <select size="7" name="pref" multiple>
+                        <option value="cappuccino">01055834032 카푸치노 2잔</option>
+                        <option value="coffelattae">01055834032 카페라떼 3잔</option>
+                        </select>
+            </div><!--  Sales_Status -->
+
+        </main>
+
+        </div><!--container -->
+</body>
+</html>

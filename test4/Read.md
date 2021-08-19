@@ -11,10 +11,10 @@ function} 이거는 있지만 안함 PL/SQL(Programming Language with SQL)
 
 SQL         DML         DDL
 -------------------------------------------
-Create      insert      create/grant/revoke
+Create      insert      create/grant
 Read        select      select
 Update      updage      alter
-Delete      delete      drop/truncate
+Delete      delete      drop/truncate/revoke
 
 
 대상        실제데이터  메타데이터

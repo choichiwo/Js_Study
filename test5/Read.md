@@ -84,5 +84,31 @@ select '['||a||']','['||b||']' from chartest; //길이 확인용
 
 
 -----------------------------------------------------------
+시퀀스 설명
 create sequence 시퀀스명 start with 첫값 increment by 증감분
-                minvalue 최저값/maxvalue 최고값 cycle
+            minvalue 최저값/maxvalue 최고값 cycle /nocycle
+
+------------------------------------------------------------
+select/update/delete 조건하에서 실행하는 경우가 대부분 <- where
+
+select * from student where name='john'
+
+MSCP
+OCA (Oracle Ceritified Administrator) - DBA실력 (OCA족보)
+
+-----------------------------------------------------------
+검색하기
+(1) 작업대상 테이블이름을 알아내서 from 뒤에 쓴다
+(2) 관련된 컬럼명들을 찾아낸다.
+(3) 표시할 컬럼명을 select 바로 뒤에 나열한다
+(4) 조건비교하는 컬럼명을 쓰고 조건에 해당하는 연산자를 적용한다 -> where
+
+---------------------------------------------------------------------
+select * from student where gender='M';
+--데이터 자체는 대소문자 구분이 있다 (키워드 테이블명 컬럼명은 관계없음)
+
+---------------------------------------------------------------------
+수정하는법
+update employees set salary=8500 where employee_id = 206;
+
+salary>=5000 and salary<=6000 == salary between 5000 and 6000(between연산자)

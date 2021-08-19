@@ -1,7 +1,7 @@
 //DB관련 설명
 table  데이터 보관장소
 view  read-only(조회만 가능한 테이블) 
-synonym 별명(nickname/alias)
+synonym 별명(nickname/alias) // CRUD 모두 가능
 index 테이블데이터를 정리, 검색속도를 증가.
 sequence
 

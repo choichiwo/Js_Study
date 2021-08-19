@@ -67,4 +67,22 @@ Lob(Larae Obiect)
     ('http:/image.human.com/student/img/파일이름.jpg')
 (2) 실제파일은 http:/image.human.com의 student/img폴더 안에 저장   
 
-alter 테이블
+alter table 테이블 add(컬럼명 타입(길이))
+                   drop column 칼럼명
+                   modify (컬럼명타입(길이)) -- 타입/길이만 변경
+                   rename column 컬럼명old to 컬럼명new --타입/길이는 불변,컬럼명 변경
+
+
+alter table 테이블 add 컬럼명 타입(길이)
+                   drop 컬럼명
+                   change 컬럼명 새컬럼명 타입(길이)  <MySQL/MariaDB>
+
+char(10) = 10자리를 다 사용해야함 주로 주민번호등에 많이사용
+
+varchar2(10) = 1o자리중 자기가 쓴만큼 사용 
+select '['||a||']','['||b||']' from chartest; //길이 확인용
+
+
+-----------------------------------------------------------
+create sequence 시퀀스명 start with 첫값 increment by 증감분
+                minvalue 최저값/maxvalue 최고값 cycle

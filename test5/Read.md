@@ -49,7 +49,22 @@ delete from 테이블명  //테이블내의 실제데이터 (데이터)
 
 drop table 테이블명 //테이블 schema (메타데이터)
 
+update 테이블명 set 컬럼명1=값1,.....컬럼명N=값N
 
+insert into ~ values ~
+select ~ from ~
+delete ~ from ~
+update ~ set ~
 
+문자열 char,varchar2 long(오라클) / char, varchar, text(MySQL) 
+정수 number(N), number
+실수 number(N,P), number,float
+날짜/시간 date, timestamp(ms)
 
+Lob(Larae Obiect)
+이미지/동영상을 DB에 저장하는 방법
+(1) 이미지/동영상 파일이름을 DB 테이블에 문자열 데이터로 저장
+    ('http:/image.human.com/student/img/파일이름.jpg')
+(2) 실제파일은 http:/image.human.com의 student/img폴더 안에 저장   
 
+alter 테이블

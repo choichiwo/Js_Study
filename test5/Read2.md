@@ -55,6 +55,73 @@ not in, not like
 
 --------------------------------------------------
 sql 함수
+
+숫자함수
+
 abs 절대값
 select abs(-12) from dual;   
 --dual == 상징적인 가상테이블 의미없음 from을 써주기 위해서 씀
+power (2,3) 제곱근 2의3승 8이 나옴
+
+select ceil(10.123),floor(10.123) from dual;
+중요 ceil : 주어진 값보다 큰 정수 중 가장 작은 정수
+중요 floor : 주어진 값보다 작은 정수 중 가장 큰 정수
+
+
+문자함수
+
+select lower(emp_name),upper(emp_name),initcap(emp_name) from employees WHERE employee_id=100;
+중요 lower 소문자로 / 중요 upper대문자로 initcap 첫글자를 대문자로 나머지를 소문자
+
+concat 연결연산자
+SELECT concat(employee_id,emp_name) from employees; 두개만 연결 가능
+위와같음  
+select employee_id||emp_name from employees; 이걸 더 많이 사용 그리고 이것은 계속해서 연결할수있음
+
+중요
+substr(컬럼명,시작인덱스,길이)
+select substr(emp_name,1,4) from employees;
+c언어계열(java,javascript,python) -> 시작인덱스 = 0
+pascal언어계열(oracle sql,pl/sql) -> 시작인덱스 = 1
+
+
+ltrim 왼쪽을 짜름
+select ltrim(emp_name, "A") from employees
+rtrim 오른쪽을 짜름
+select rtrim(emp_name, "A") from employees
+양쪽다 짜르는법
+select ltrim(rtrim(emp_name)) from employees
+
+
+lpad(컬럼명/문자열,전체길이,채울문자열) 
+컬럼명/문자열의 길이가 '전체길이' 보다 작으면 왼쪽을 '채울문자열'로 채운다
+select lpad(emp_name,20,'*') from employees;
+
+중요
+select replace(emp_name,' ','-') from employees order by emp_name;
+컬럼명/문자열에서 두번쨰 문자열에 해당하는 부분을 세번쨰 문자열로 대처
+
+중요
+select emp_name,instr(emp_name,'an') from employees order by emp_name;
+컬럼명/문자열에서 두번쨰 문자열의 시작하는 인덱스 값을 변환
+
+
+날짜함수
+
+select sysdate from dual;
+sysdate 날짜 표시 년 월 일
+
+변환함수
+
+중요 to_char
+select to_char(sysdate,'YYYY-MM-DD') from dual;
+select emp_name, to_char(hire_date,'YYYY-MM-DD') from employees order by hire_date;
+YYYY-MM-DD = 2019-08-11  YY-MM-DD = 19-08-11 YYYY-MONTH-DD DAY = 2019-8월-11 11일
+
+to_number
+insert into student(id,name,mobile,gender) VALUES(to_number('1234'),'..','...','j');
+
+to_date
+select to_date('20210820','YYYY-MM-DD') from dual;
+
+select to_char(to_date('20210820','YYYY-MM-DD'),'YYYY-MM-DD') from dual;

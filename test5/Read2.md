@@ -189,5 +189,37 @@ select * from kor_loan_status;
 select avg(loan_jan_amt) from kor_loan_status where region='세종' and gubun='기타대출'; 
 
 
+
 min() 최소값  max() 최대값   구하는 방법
 select min(math),min(korean),max(math),max(korean) from student;
+
+
+집계함수
+
+group by = 특정 그룹을 묶음
+group by 뒤에 쓸 컬럼은 무조건 select뒤에 모두 나열돼야 한다
+select에 나열된 컬럼 뒤에는 무조건 하나이상의 집계함수가 있어야 한다.
+
+select department_id, count(*) from employees group by department_id order by department_id;
+
+
+having은 집계함수랑 같이 쓰인다.  즉 group by랑 같이 쓴다
+
+즉 group by랑 같이 쓴다  
+
+뒤에 조건을 붙여 주는것 count(*)>1, count(*) between 2 and 10 이런식으로 
+
+select manager_id,count(*) as cnt from employees
+        where manager_id is not null
+        GROUP BY manager_id having count(*)>1
+        order by cnt;
+
+select manager_id,count(*) as cnt from employees
+        where manager_id is not null
+        GROUP BY manager_id having count(*) between 2 and 10
+        order by cnt;        
+
+select region,gubun,sum(loan_jan_amt)
+        from kor_loan_status
+        group by region,gubun
+        ORDER by region;        

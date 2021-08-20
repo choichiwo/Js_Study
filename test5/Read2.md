@@ -125,3 +125,30 @@ to_date
 select to_date('20210820','YYYY-MM-DD') from dual;
 
 select to_char(to_date('20210820','YYYY-MM-DD'),'YYYY-MM-DD') from dual;
+
+
+null관련 함수
+
+중요 nvl
+null값을 변환 
+select emp_name,commission_pct from employees order by emp_name;
+select emp_name,nvl(commission_pct,12) from employees order by emp_name;
+
+nullif
+(컬럼명1/값1,컬럼명2/값2): 
+
+
+ifnull(MySQL)
+(컬럼명1/값1,컬럼명2/값2): 컬럼명1/값1이 null이면, 컬럼명2/값2을 출력,
+                         컬럼명1/값1이 null이 아니면, 컬럼명1/값1을 출력
+
+
+-----------------------------------------------------------------
+
+중요 count/ 중요 distinct/ 중요 sum/avg/중요 min/중요 max/variance(분산)/stddev
+
+count() 안에 컬럼명을 사용할 떄, 컬럼내의 값이 null인 것은 count에서 제외된다.
+select count(*),count(commission_pct) from employees;
+
+널값을 0으로 전환해서 나오게 변환
+select count(*),count(commission_pct),count(nvl(commission_pct,0)) from employees;

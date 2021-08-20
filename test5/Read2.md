@@ -152,3 +152,38 @@ select count(*),count(commission_pct) from employees;
 
 널값을 0으로 전환해서 나오게 변환
 select count(*),count(commission_pct),count(nvl(commission_pct,0)) from employees;
+
+
+distinct 뒤따라 나오는 컬럼에 유일한 값만 조회, 중복값 제거
+select distinct department_id 
+        from employees
+        where department_id is not null
+        order by department_id;
+
+select distinct cust_year_of_birth as byear from customers order by byear;
+
+cust_year_of_birth as byear == as byear 명칭을 지정해주는 방식
+
+
+select distinct cust_year_of_birth from customers order by 1; == 컴럼번호 1부터 오름차순
+
+
+select employee_id,emp_name,manager_id from employees order by 3; 
+== employee_id,emp_name,manager_id 이 세가지중 3번쨰인 manager_id 정렬 2면 emp_name로 정렬
+
+
+먼저 manager_id정렬 후에 그안에서 emp_name 정렬 == 이중정렬이라고도 함.
+select employee_id,emp_name,manager_id from employees order by manager_id,emp_name; 
+
+select employee_id as eid,emp_name as ename, manager_id as mid
+    from employees
+    order by mid,eid;
+
+
+sum() 합계구하기
+select * from kor_loan_status;
+select sum(loan_jan_amt) from kor_loan_status where region='세종' and gubun='기타대출';    
+
+avg() 평균구하기
+select * from kor_loan_status;
+select avg(loan_jan_amt) from kor_loan_status where region='세종' and gubun='기타대출'; 

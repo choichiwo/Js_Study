@@ -187,3 +187,7 @@ select sum(loan_jan_amt) from kor_loan_status where region='세종' and gubun='�
 avg() 평균구하기
 select * from kor_loan_status;
 select avg(loan_jan_amt) from kor_loan_status where region='세종' and gubun='기타대출'; 
+
+
+min() 최소값  max() 최대값   구하는 방법
+select min(math),min(korean),max(math),max(korean) from student;

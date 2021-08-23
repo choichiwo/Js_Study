@@ -99,3 +99,17 @@ select *
 select a.emp_name,b.department_name
 from employees a, departments b
 where a.department_id =b.department_id and parent_id is null;    
+
+select a.emp_name,b.department_name
+from employees a, departments b
+where a.department_id in (select department_id from departments where parent_id is null) and a.department_id =b.department_id; --중첩쿼리
+
+
+select a.emp_name,b.department_name
+    from (select emp_name,department_id from employees) a,
+         (select department_name,department_id from departments where parent_id is null) b
+    where a.department_id=b.department_id;    --인라인 서브쿼리
+
+위에 세개다 같은결과가 나옴
+
+-----------------------------------------------

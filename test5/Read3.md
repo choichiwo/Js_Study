@@ -56,6 +56,14 @@ update booking set roomname='금강산' where mobile='77778888'
 
 -----------------------------------
 join하는 법
+
+이름과 직위명을 출력(employees,job테이블을 join)
+
+내부조인(inner join)
+
+동등조인(equi-join) 80%정도 비율
 select a.emp_name,b.department_name
 from employees a, departments b
 where a.department_id=b.department_id;
+
+semi-jjoin(in/ex)

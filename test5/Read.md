@@ -112,3 +112,4 @@ select * from student where gender='M';
 update employees set salary=8500 where employee_id = 206;
 
 salary>=5000 and salary<=6000 == salary between 5000 and 6000(between연산자)
+

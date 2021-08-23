@@ -223,3 +223,9 @@ select region,gubun,sum(loan_jan_amt)
         from kor_loan_status
         group by region,gubun
         ORDER by region;        
+
+select 칼럼명1...칼럼명N,집계함수
+        from 테이블명
+        group by 칼럼명1...칼럼명N
+        having 집계함수에 대한 조건
+        order by 칼럼명a...칼럼명z

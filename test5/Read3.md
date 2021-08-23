@@ -113,3 +113,21 @@ select a.emp_name,b.department_name
 위에 세개다 같은결과가 나옴
 
 -----------------------------------------------
+
+select a.employee_id, a.emp_name,
+      (select b.emp_name from employees b where a.manager_id=b.employee_id) as manager_id,
+      d.department_name, 
+      j.job_title
+from employees a, departments d, jobs j
+where a.department_id=d.department_id and a.job_id=j.job_id
+order by a.employee_id;  
+
+
+select a.employee_id as "사원 번호", 
+       a.emp_name as "사원 이름",
+      (select b.emp_name from employees b where a.manager_id=b.employee_id) as "담당 매니저",
+      d.department_name as "부서", 
+      j.job_title as "직책"
+from employees a, departments d, jobs j
+where a.department_id=d.department_id and a.job_id=j.job_id
+order by a.employee_id;   

@@ -93,3 +93,9 @@ select *
     from (select * from employees) --서브쿼리
     where manager_id=100
     order by emp_name;    
+
+
+-------------------------------------------
+select a.emp_name,b.department_name
+from employees a, departments b
+where a.department_id =b.department_id and parent_id is null;    

@@ -66,4 +66,30 @@ select a.emp_name,b.department_name
 from employees a, departments b
 where a.department_id=b.department_id;
 
-semi-jjoin(in/ex)
+semi-join(in/exists)
+anti-join(!=)
+
+셀프조인(self join)
+select a.emp_name,a.employee_id,b.emp_name as manager_name
+    from employees a, employees b
+    where a.manager_id=b.employee_id;
+
+외부조인(outer join) 
+=, >, <, >=, <=, <>
+(+) 이표시 들어감 널값도 나오게함
+select a.emp_name,a.employee_id,b.emp_name as manager_name
+    from employees a, employees b
+    where a.manager_id=b.employee_id(+)  --for Oracle
+    order by a.emp_name;    
+
+
+ select a.emp_name,a.employee_id,b.emp_name as manager_name
+    from employees a left outer join employees b --MySQL
+    on a.manager_id=b.employee_id
+    order by a.emp_name;   
+
+----------------------------------------
+select *
+    from (select * from employees) --서브쿼리
+    where manager_id=100
+    order by emp_name;    

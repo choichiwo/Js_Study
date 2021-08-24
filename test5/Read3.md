@@ -131,3 +131,6 @@ select a.employee_id as "사원 번호",
 from employees a, departments d, jobs j
 where a.department_id=d.department_id and a.job_id=j.job_id
 order by a.employee_id;   
+
+
+Terminology(전문용어)

@@ -28,7 +28,7 @@ MVC (Model View Controller)
 <script> <!-- Control -->
 </script>
 
-@RequestMapping(value = "경로명", method = RequestMethod.GET)
+
 	public String 메소드이름( Model m) {		
 		m.addAttribute("변수명1", "값1");		
 		return "JSP화일이름";  //home    .jsp생략
@@ -40,3 +40,12 @@ home.jsp에서
 </body>   
 
 기본경로명(http//localhost:8081/프로젝트이름)+"/경로명"
+
+
+-컨트롤러 만들기
+1.프로젝트 이름 -> 오른쪽 버튼 -> New -> class
+2.클래스 이름 주기(myController) -> 완료
+3.myController열고, 클래스 이름위에 @Controller 추가
+4.import "Controller"선택
+5.@RequestMapping(value = "추가경로명", method = RequestMethod.GET) 넣고
+6.새 메소드 작성(return값은 String),

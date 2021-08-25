@@ -14,5 +14,17 @@ Client
 sts 스피링 툴 슈트
 spring tool suites
 
+spring3
+spring4 -> spring Boot
 
-spring tool suites
+---------------------------------------------
+
+MVC (Model View Controller)
+
+
+<body> <!-- View (보이는 부분) -->
+    <input type=button id=btnGO>  <!-- id= Model (중간에 접점) --> 
+</body>
+<script> <!-- Control -->
+</script>
+

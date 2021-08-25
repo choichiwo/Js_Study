@@ -28,3 +28,15 @@ MVC (Model View Controller)
 <script> <!-- Control -->
 </script>
 
+@RequestMapping(value = "경로명", method = RequestMethod.GET)
+	public String 메소드이름( Model m) {		
+		m.addAttribute("변수명1", "값1");		
+		return "JSP화일이름";  //home    .jsp생략
+	}
+
+home.jsp에서
+ <body> 
+    ...${변수명1}
+</body>   
+
+기본경로명(http//localhost:8081/프로젝트이름)+"/경로명"

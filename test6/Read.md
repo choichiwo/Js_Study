@@ -19,3 +19,6 @@ insert into room values(seq_room.nextval,'한라산',2,6,450000);
 insert into room values(seq_room.nextval,'지리산',3,5,400000);
 insert into room values(seq_room.nextval,'태조산',4,2,200000);
 select * from roomtype;
+select a.roomcode,a.name,b.name,a.howmany,a.howmuch
+from room a,roomtype b
+where a.type=b.typecode;

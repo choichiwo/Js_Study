@@ -21,3 +21,13 @@ mobile varchar2(20) not null
 );
 desc member;
 drop table member;
+
+create table booking (
+bookcode int,
+roomcode int,
+person int,
+checkin char(8),
+checkout char(8),
+name VARCHAR2(20),
+mobile VARCHAR2(20)
+);

@@ -14,9 +14,9 @@ update room set name='칠성산' where roomcode=2;
 commit;
 
 create table member (
-name varchar2(30) not null,
-loginid varchar2(20) primary key,
-passcode varchar2(12) not null,
+username varchar2(30) not null,
+userid varchar2(20) primary key,
+passcode1 varchar2(12) not null,
 mobile varchar2(20) not null
 );
 desc member;

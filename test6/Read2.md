@@ -59,8 +59,8 @@ create table booking (
 bookcode int primary key,
 roomcode int not null,
 person int not null,
-checkin char(8) not null,
-checkout char(8) not null,
+checkin date not null,
+checkout date not null,
 summuch VARCHAR2(20) not null,
 name VARCHAR2(20) not null,
 mobile VARCHAR2(20) not null

@@ -23,11 +23,22 @@ desc member;
 drop table member;
 
 create table booking (
-bookcode int,
-roomcode int,
-person int,
-checkin char(8),
-checkout char(8),
-name VARCHAR2(20),
-mobile VARCHAR2(20)
+bookcode int primary key,
+roomcode int not null,
+person int not null,
+checkin char(8) not null,
+checkout char(8) not null,
+name VARCHAR2(20) not null,
+mobile VARCHAR2(20) not null
 );
+
+select * from roomtype;
+select roomcode, name roomname, 
+    (select name from roomtype where typecode=2) as typename,
+    howmany, howmuch
+from room 
+where type=2 and roomcode not in(
+select roomcode from room
+INTERSECT
+select roomcode from booking where (checkin between '21-09-06' and '21-09-08') 
+and (checkout between '21-09-06' and '21-09-08') or (checkin<'21-09-06' and checkout>'21-09-08'));

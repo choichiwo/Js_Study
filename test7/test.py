@@ -11,3 +11,7 @@ for a in range(2,100):
 for i in range(2,10):
     for j in range(1,10):
         print("{}X{}={}".format(i,j,i*j))        
+
+#글짜 입력
+print("Hello",end=" & ")
+print("World")        

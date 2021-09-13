@@ -1,5 +1,3 @@
-x=10
-y=20
-z=30
-x,y,z=y,z,x
-print(x,y,z)  
+n=input('숫자를 넣으시오.')
+for i in range(int(n)):
+    print(i)

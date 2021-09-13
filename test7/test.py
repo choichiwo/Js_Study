@@ -14,4 +14,14 @@ for i in range(2,10):
 
 #글짜 입력
 print("Hello",end=" & ")
-print("World")        
+print("World")       
+
+#함수 활용
+def makeBlank(n):
+    return n*' '
+
+for i in range(1,11):
+    print(makeBlank(i)+'*')
+
+
+#리스트 활용

@@ -1,6 +1,5 @@
-l1=[1,100,25,47,-12,5,-1234]
-for i in l1:
-    print(i)
-
-for i in range(len(l1)):
-    print(l1[i])   
+x=10
+y=20
+z=30
+x,y,z=y,z,x
+print(x,y,z)  

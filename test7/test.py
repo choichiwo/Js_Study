@@ -61,3 +61,13 @@ s1={10,20,30,10,20,30}          #len(s1) ==3 중복제외해서
 d1={'name':'Choi chi','age':23}    
 d1['owner']='John'
 d1['name']='John'
+print(d1)
+
+for i in d1: #print only keys
+    print(i)
+
+for i in d1.values(): #print only values
+    print(i)
+
+for i,j in d1.items(): #print only key/value by using Tuple
+    print(i,j)

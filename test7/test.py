@@ -1,11 +1,11 @@
 ## 소수 만들기
-for a in range(2,100):
+for a in range(2,1001):
     c=0    
     for b in range(2,a):
         if a%b==0:
             c=1
     if c==0:
-        print(a)
+        print(a,end=',')
 
 #구구단
 for i in range(2,10):
@@ -71,3 +71,8 @@ for i in d1.values(): #print only values
 
 for i,j in d1.items(): #print only key/value by using Tuple
     print(i,j)
+
+
+n=input('숫자를 넣으시오.')
+for i in range(int(n)):
+    print(i)

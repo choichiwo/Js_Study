@@ -6,3 +6,6 @@ script -> web browser node.js
 
 powerbuilder
 sap erp -> abap -> 
+
+R 언어 <- 통계전용 with BigData
+BigData = 1TB

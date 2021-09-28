@@ -329,6 +329,3 @@ Aspect Oriented Programming. 관점 지향 프로그래밍
 1. Validation
 어노테이션으로 검증할수 있다.
 @Size, @NotNull, @NotEmpty, @NotBlank, @Past, @Future, @Max, @AssertTrue, @Valid, @Pattern 등이 있다.
-
-git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
